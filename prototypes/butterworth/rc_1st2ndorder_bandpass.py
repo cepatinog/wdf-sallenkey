@@ -4,6 +4,13 @@ import numpy as np
 import matplotlib.pyplot as plt
 from pywdf.core.circuit import Circuit
 
+if __name__ == "__main__" and __package__ is None:
+    # When executed directly, add the parent folder so relative imports work
+    import sys
+    from pathlib import Path
+
+    sys.path.append(str(Path(__file__).resolve().parents[1]))
+
 # Import the low-pass and high-pass filters already created
 from .rc_lowpass import RCLowPass
 from .rc_highpass import RCHighPass
