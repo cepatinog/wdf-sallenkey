@@ -1,5 +1,8 @@
+
 from typing import Iterable
 import numpy as np
+
+=======
 
 from pywdf.core.wdf import (
     Resistor,
@@ -7,11 +10,13 @@ from pywdf.core.wdf import (
     SeriesAdaptor,
     PolarityInverter,
     IdealVoltageSource,
+
 )
 from pywdf.core.circuit import Circuit
 
 
 class RCHighPass(Circuit):
+
     """Simple first‑order RC high‑pass filter."""
 
     # ─────────────────────────── construction ────────────────────────────
@@ -80,3 +85,4 @@ if __name__ == "__main__":
 
     hpf = RCHighPass(sample_rate=48_000, cutoff_hz=1000)
     hpf.plot_freqz()
+
